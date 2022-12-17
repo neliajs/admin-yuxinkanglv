@@ -9,7 +9,7 @@
         Documentation </a>
     </aside>
 
-    <div class="editor-container">
+    <!-- <div class="editor-container">
       <el-tag class="tag-title">
         Basic:
       </el-tag>
@@ -45,12 +45,12 @@
     <el-button style="margin-top:80px;" type="primary" icon="el-icon-document" @click="getHtml">
       Get HTML
     </el-button>
-    <div v-html="html" />
+    <div v-html="html" /> -->
   </div>
 </template>
 
 <script>
-import MarkdownEditor from '@/components/MarkdownEditor'
+// import MarkdownEditor from '@/components/MarkdownEditor'
 
 const content = `
 **This is test**
@@ -62,7 +62,7 @@ const content = `
 `
 export default {
   name: 'MarkdownDemo',
-  components: { MarkdownEditor },
+  // components: { MarkdownEditor },
   data() {
     return {
       content1: content,
