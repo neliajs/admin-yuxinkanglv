@@ -59,7 +59,6 @@
     "eslint": "6.7.2",
     "eslint-plugin-vue": "6.2.2",
     "html-webpack-plugin": "3.2.0",
-    "lint-staged": "8.1.5",
     "mockjs": "1.0.1-beta3",
     "plop": "2.3.0",
     "runjs": "4.3.2",
@@ -92,12 +91,6 @@
     "management-system"
   ],
   "license": "MIT",
-  "lint-staged": {
-    "src/**/*.{js,vue}": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PanJiaChen/vue-element-admin.git"
