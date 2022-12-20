@@ -79,22 +79,35 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
-      }
+        meta: { title: '首页', icon: 'dashboard', affix: true }
+      },
     ]
   },
   {
-    path: '/documentation',
+    path: '/shop-manage',
     component: Layout,
+    redirect: '/shop-manage/index',
     children: [
       {
         path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: 'Documentation', icon: 'documentation', affix: true }
-      }
-    ]
+        component: () => import('@/views/shop-manage'),
+        name: 'ShopManage',
+        meta: { title: '门店管理', icon: 'dashboard', noCache: false },
+      },
+    ],
   },
+  // {
+  //   path: '/documentation',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/documentation/index'),
+  //       name: 'Documentation',
+  //       meta: { title: 'Documentation', icon: 'documentation', affix: true }
+  //     }
+  //   ]
+  // },
   {
     path: '/guide',
     component: Layout,

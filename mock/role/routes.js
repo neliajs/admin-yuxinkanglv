@@ -41,9 +41,21 @@ const constantRoutes = [
         path: 'dashboard',
         component: 'views/dashboard/index',
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
+  },
+  {
+    path: 'shop-manage',
+    redirect: '/shop-manage/index',
+    children: [
+      {
+        path: 'index',
+        component: 'views/shop-manage',
+        name: 'ShopManage',
+        meta: { title: '门店管理', icon: 'dashboard', affix: true },
+      },
+    ],
   },
   {
     path: '/documentation',

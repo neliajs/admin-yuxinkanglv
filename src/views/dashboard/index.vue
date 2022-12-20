@@ -1,31 +1,49 @@
 <template>
   <div class="dashboard-container">
-    <component :is="currentRole" />
+    <el-row :gutter="20">
+      <el-col class="elcol" :span="6" v-for="item in 8" :key="item">
+        <el-card class="box-card">
+          <div class="text item">
+            <div class="title">{{item}}</div>
+            {{'列表内容 ' + item }}
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import adminDashboard from './admin'
-import editorDashboard from './editor'
-
 export default {
   name: 'Dashboard',
-  components: { adminDashboard, editorDashboard },
+
   data() {
     return {
       currentRole: 'adminDashboard'
     }
   },
-  computed: {
-    ...mapGetters([
-      'roles'
-    ])
-  },
   created() {
-    if (!this.roles.includes('admin')) {
-      this.currentRole = 'editorDashboard'
+    this.fetchDatas()
+  },
+  methods: {
+    fetchDatas() {
+      console.log('fetch')
     }
   }
 }
 </script>
+
+<style scoped>
+.dashboard-container {
+  padding: 20px;
+}
+.elcol {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+</style>

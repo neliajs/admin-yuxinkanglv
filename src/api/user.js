@@ -22,3 +22,24 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function shopManageList(query) {
+  return request({
+    url: '/vue-element-admin/transaction/list',
+    method: 'get',
+    params: query
+  })
+}
+
+export function shopAdd(data) {
+  return request({
+    url: '/vue-element-admin/transaction/list',
+    method: 'post',
+    data
+  })
+}
+
+export default {
+  shopManageList,
+  shopAdd,
+}
